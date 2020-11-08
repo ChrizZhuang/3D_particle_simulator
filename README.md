@@ -1,26 +1,25 @@
-# HW7 / final project instructions
+## 3D particle simulator
 
-## Instructions
-Goal: Implement velocity Verlet integrator for the three new forces
-1. Revise / merge this template code with your hw6
-2. Reuse your hw6 solution, refactoring any for your LatticeParticleList
-   and force (gravity, friction, neighbor) calculations with the classes
-   - **NOTE:** you will now calculate 3D solutions, and the boundary
-     lattice particles should have no motion
-3. Create tests for all your old and new code in `test`
-4. Make sure your code, documentation, comments, etc. are good
-5. Determine if the particles settle into "steady-state" for some values
+### Introduction 
+This is a software package that can be used to simulate particles' movement within a cube.
+Considered forces include:
+1. Gravity force
+1. Spring force
+1. Drag force
 
-## Grading
-- 20% Getting reasonable results - prove it to us in your presentation!
-- 20% Well-formatted, good naming, comments, documentation, instructions
-- 20% Tests pass for both old and new files/functions/classes
-- 20% Class design/encapsulation, avoiding cut-and-paste, good reuse
-- 20% Final project presentation 
-- (BONUS) 3D plots, extra refactoring of hw6, doxygen
+### API
+Tunable parameters include:
+1. number of particles (should be an integer's cubic, int)
+1. number of step (number of total step of Verlet integration, int)
+1. filename (output filename, recommend to store inside the prebuilt *results* directory, str)
+1. test (initial configuration you want to test, including 'equil', 'shift' and 'moving', str)
+1. l (length of the cubic side, double)
+1. time (total time you want to simulate, double)
 
-### Sam's 3D visualization
-- In `util/3D_visualization.ipynb`
+*Illustration about 3 test configurations:
+**'equil'** means that all the particles are placed uniformly, no change of position should happen.
+**'shift'** means that all the particles are shift towards the positive x direction for half of the equil spacing.
+**' moving'** means that all the particles have the initial velocity towards the positive x direction.
 
 ### Build instructions
 - In this directory, you can build your main executable with:
@@ -28,7 +27,7 @@ Goal: Implement velocity Verlet integrator for the three new forces
 g++ --std=c++11 -Iinclude src/*.cpp -o ./run.exe; 
 ./run.exe -n 27 -nstep 10000 -f results/test1.txt -test shift -l 2 -time 2;
 ```
-Please store your result.txt under the diectory results.
+Please store your result.txt under the diectory *results*.
 
 - To build and run all the tests:
 ```
@@ -42,12 +41,7 @@ cd util;
 conda activate [your_python_environment];
 jupyter notebook 3D_Visualization.ipynb
 ```
-In the 3rd block of 3D_Visualization.ipynb, please specify the filename of your results in the results directory and the cbrtN which is the number of particle in each dimension(including the fixed ones).
+In the 3rd block of 3D_Visualization.ipynb, please specify the filename of your results in the results directory and cbrtN which is the number of particle in each dimension(including the fixed ones).
 Then run the whole code and you can see the results at the bottom of this file.
 
-### Adding tests
-* in `test/run_tests.cpp`, you can add any additional tests
-* we have provided more new examples:
-  `test_LatticeParticleForce.cpp, etc.`
-* the build / run instructions above should then run your additional tests
 
