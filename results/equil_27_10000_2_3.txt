@@ -1,0 +1,125 @@
+Results of condition "shift" at 2 s.
+
+
+Information about this system: 
+
+   Number of total particles: 27;
+   Number of interior particles: 1;
+   Spring constant: 0.5 N/m;
+
+Information about the simulation: 
+   Method: Verlet integration; 
+   Type of test: shift;
+   Number of steps: 10000 steps;
+
+
+Simulation result: 
+
+Positions: 
+
+The 1th layer: 
+   0 0 0
+   1 0 0
+   2 0 0
+   0 1 0
+   1 1 0
+   2 1 0
+   0 2 0
+   1 2 0
+   2 2 0
+
+The 2th layer: 
+   0 0 1
+   1 0 1
+   2 0 1
+   0 1 1
+   1.1292705 1 0
+   2 1 1
+   0 2 1
+   1 2 1
+   2 2 1
+
+The 3th layer: 
+   0 0 2
+   1 0 2
+   2 0 2
+   0 1 2
+   1 1 2
+   2 1 2
+   0 2 2
+   1 2 2
+   2 2 2
+
+
+Velocities:
+
+The 1th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+The 2th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   -0.51757614 2.8366822e-15 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+The 3th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+
+Accelerations:
+
+The 1th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+The 2th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0.12184725 -1.1719638e-14 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+The 3th layer: 
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+   0 0 0
+
+
